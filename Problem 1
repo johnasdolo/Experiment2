@@ -1,0 +1,51 @@
+#include <iostream>
+#include <conio.h>
+	
+using namespace std;
+int main()
+{
+		char package;
+		int hours;
+		
+		cout << "Pick a package you want to avail: PACKAGE A or PACKAGE B or PACKAGE C? \n";
+    cout <<"\n"; 
+		cout << "Package A: 10 hrs for only P995 per month. Additional hours are P20/hr \n"; 
+		cout << "Package B: 20 hrs for only P1495 per month. Additional hours are P10/hr. \n";
+		cout << "Package C: Unlimited access for only P1995 per month.\n" <<endl;
+		cout << "Please Enter A, B or C.\n\n";
+		cout << "What package you want to avail? ";
+		cin  >> package;
+		cout << "How many hours you have used? ";
+		cin  >> hours;
+		cout << "\n";
+		
+		switch (package)
+		{
+			case 'A':
+			case 'a':
+				if (hours <= 10)
+					cout << "The total amount to pay is P995.";
+				else
+					cout << "The total amount to pay is P" << ((hours-10)*20)+995 << ".";
+			break;
+			
+			case 'B':
+			case 'b':
+				if (hours <= 20)
+					cout << "The total amount to pay is P1495.";
+				else
+					cout << "The total amount to pay is P" << ((hours-20)*10)+1495 << ".";
+			break;
+			
+			case 'C':
+			case 'c':
+				cout << "The total amount to pay is P1995.";
+			break;
+			
+			default:
+				cout << "Invalid information!";
+		}
+		
+		_getch();
+		return 0;
+	}
