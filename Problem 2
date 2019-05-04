@@ -1,0 +1,33 @@
+#include<iostream>
+#include<conio.h>
+	
+using namespace std;
+int main()
+{
+		float gallon1, gallon2, prev;
+		float gallon, bill1, bill2, charge, total;
+		cout<< "Please put the needed information. \n";
+		cout<<"\n"; 
+		cout << "Your consumption last month: ";
+		cin >> gallon1;
+		cout << "Your consumption recently this month: ";
+		cin >> gallon2;
+		cout << "If there is unpaid balance: ";
+		cin >> prev;
+		
+		gallon= (gallon1-gallon2);
+		charge= gallon*1.10;
+		bill1= charge+35;
+		
+		if (prev>0)
+			bill2=prev+20;
+		else
+			bill2=0;
+			
+		total=bill1+bill2;
+		
+		cout << "\nThe total amount you are going to pay for water consumption is: " << total << endl;
+		
+		_getch();
+		return 0;
+	}
